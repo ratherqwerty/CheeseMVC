@@ -1,0 +1,21 @@
+﻿@{
+    
+}
+
+<h1>My Cheeses</h1>
+<p><a asp-controller="Cheese" asp-action="Add">Add Cheese</a></p>
+
+@if (ViewBag.cheeses.Count == 0)
+{ 
+    <p>No cheeses yet!</p>
+}
+
+<ul>
+    @foreach (KeyValuePair<string, string> blah in ViewBag.cheeses)
+    {
+   // <li>@Console.WriteLine(Cheeses.Key +  ": " + Cheeses.Value)</li>
+    <li>@blah.Key: @blah.Value</li>
+
+    //{0} + {1}; TKey<string>Cheeses, TValue<string>Cheeses</li>
+    }
+</ul>
